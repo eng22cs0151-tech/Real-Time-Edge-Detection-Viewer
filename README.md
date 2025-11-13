@@ -19,9 +19,12 @@ It works best with a **dark background** 🌑📄
 
 ## 🖼 Screenshots / GIFs
 
-![App Screenshot 1](screenshots/screenshot1.png)  
-![App Screenshot 2](screenshots/screenshot2.png)  
-![GIF Demo](screenshots/demo.gif)  
+![Use Darker Background](use_darker_bg.png)  
+![Move Closer](move_closer.png)  
+![Move Away](move_away.png)  
+![Adjust Angle](adjust_angle.png)  
+![Hold Still](hold_still.png)  
+![Adjust Crop](adjust_crop.png)  
 
 ---
 

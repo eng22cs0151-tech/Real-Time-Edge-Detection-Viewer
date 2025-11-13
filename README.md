@@ -1,20 +1,19 @@
 LiveEdgeDetection
 
-LiveEdgeDetection is an Android document detection library built on top of OpenCV. It scans documents in live camera mode, allows you to adjust the crop using the detected 4 edges, and performs perspective transformation on the cropped image.
-
-It works best with a dark background for optimal detection.
+LiveEdgeDetection is an Android document detection library built on top of OpenCV. It scans documents from camera live mode and allows you to adjust crop using the detected 4 edges and performs perspective transformation of the cropped image.
+It works best with a dark background.
 
 JavaDocs
 
 You can browse the JavaDocs for the latest release.
 
-Download APK
+Download apk
 
-Try the sample app by downloading the APK.
+Try the sample app.
 
 Screenshots
 
-Use darker background
+Use darker bg
 
 Move closer
 
@@ -27,11 +26,9 @@ Hold still
 Adjust crop
 
 Result
-
 Integrating into your project
 
-This library is available in the JitPack.io repository. To use it, add the following inside your root build.gradle file:
-
+This library is available in JitPack.io repository. To use it, make sure to add the below inside root build.gradle file:
 allprojects {
     repositories {
         mavenCentral()
@@ -39,29 +36,21 @@ allprojects {
     }
 }
 
-
-Then add the dependency to your app module's build.gradle file:
-
 dependencies {
-   implementation 'com.github.adityaarora1:LiveEdgeDetection:1.0.6'
-   
+   compile 'com.github.adityaarora1:LiveEdgeDetection:1.0.6'
    // Other dependencies your app might use
 }
-
 Usage
 
-Out of the box, it uses OpenCV.
+Out of the box it uses OpenCV.
 
-Start ScanActivity from your activity using startActivityForResult:
-
+Start startActivityForResult from your activity:
 startActivityForResult(new Intent(this, ScanActivity.class), REQUEST_CODE);
 
-
-Get the file path for the cropped image inside onActivityResult:
+Get a file path for cropped image in onActivityResult:
 
 String filePath = data.getExtras().getString(ScanConstants.SCANNED_RESULT);
 Bitmap baseBitmap = ScanUtils.decodeBitmapFromFile(filePath, ScanConstants.IMAGE_NAME);
-
 
 Display the image using TouchImageView:
 
